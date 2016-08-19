@@ -1,6 +1,6 @@
 angular.module('starter.controllers', [])
 
-.controller('DashCtrl', function($scope,$rootScope,$timeout) {
+.controller('DashCtrl', function($scope,$rootScope,$timeout,$ionicScrollDelegate) {
 
 	
 	// Kumon color code : #7DCDF4;
@@ -73,6 +73,7 @@ angular.module('starter.controllers', [])
 	  $scope.topicSelected = function(topic){
 			$scope.title = topic.title + ' Flashcards';
 			init();
+			$ionicScrollDelegate.$getByHandle('show-page').scrollTop(true);
 	  }
 
 	  
