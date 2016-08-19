@@ -1,0 +1,35 @@
+.background-color-grey {
+  background-color: #f7f7f7;
+}
+.container {
+	width: 100%;
+}
+
+.mydeck {
+	max-width: 500px;
+}
+
+.myColor {
+	    background-image: linear-gradient(red 0px,#ffffff 43px,#ff78b4 44px);
+}
+
+.kumon {
+	background-color:  #4257b2  !important;
+	color: #FAFAFA;
+}
+.bar.bar-stable .title {
+    color: #FAFAFA;
+}
+
+.nav-bar-block, .bar {
+  background-color:  #4257b2  !important;
+}
+.item-divider {
+	background-color:  #4257b2  !important;
+	color: #FAFAFA;
+}
+
+.gallery {
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
