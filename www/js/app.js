@@ -74,10 +74,10 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','a
         }
       })
 
-  .state('tab.dash', {
+  .state('tab.topics', {
     url: '/topics',
     views: {
-      'tab-dash': {
+      'tab-topics': {
         templateUrl: 'templates/topics.html',
         controller: 'TopicsCtrl'
       }

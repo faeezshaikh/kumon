@@ -142,7 +142,7 @@ angular.module('starter.controllers', [])
 	      	  $state.go('app.chat');
 //	      	  $window.location.href = "#/app/chat/";
 	        } else {
-	      	  $state.go('tab.dash');
+	      	  $state.go('tab.topics');
 	      	 // $window.location.href = "#/app/feeds";
 	        }
 	        if (authData.provider == 'facebook') {
