@@ -83,6 +83,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','a
       }
     }
   })
+   .state('tab.topic', {
+    url: '/topics/:topicId',
+    views: {
+      'tab-topics': {
+        templateUrl: 'templates/topic.html',
+        controller: 'TopicCtrl'
+      }
+    }
+  })
   
   
 
