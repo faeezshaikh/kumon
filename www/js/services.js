@@ -3,7 +3,7 @@ angular.module('starter.services', [])
 
 .factory('CardService',function(){
 
-	var map ={1:{"topic" : "Vocabulary", "cards" : [{"front":"2+3","back":"5"},{"front":"whats your name?","back":"Maryam Shaikh"}]},
+	var map ={1:{"topic" : "Vocabulary", "cards" : [{"front":"2+3","back":"5"},{"front":"whats your name?","back":"Maryam Shaikh"},{"front":"2+3","back":"5"}]},
 				2 : {"topic" : "Math", "cards" :  [{"front":"Whats your name?","back":"Maryam"},{"front":"How old are you?","back":"5"}]}};
 	 
 

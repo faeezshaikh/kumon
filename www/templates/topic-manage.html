@@ -1,5 +1,6 @@
 
 <ion-view view-title="Manage">
+<ion-pane class="background-color-grey">
   <ion-content>
   <div class="card" ng-repeat="c in cards">
 		  <div class="item item-divider" >
@@ -12,5 +13,12 @@
 		    {{c.back}}
 		  </div>
 </div>
+<!-- 	<div class="row">&nbsp;</div>
+	<div class="row">&nbsp;</div> -->
+  
   </ion-content>
+    <button class="button button-float" ng-click="openComposer()">
+	        <i class="icon ion-compose"></i>
+	      </button>
+	      </ion-pane>
 </ion-view>
