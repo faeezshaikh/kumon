@@ -1,0 +1,29 @@
+ <ion-modal-view>
+  		<ion-header-bar class="bar bar-header bar-balanced">
+          <h1 class="title">Create a New Flashcard</h1>
+          <button class="button button-clear button-primary" ng-click="closeComposer()">Cancel</button>
+        </ion-header-bar>
+  <ion-content>
+  <div class="list padding">
+		  
+		  <label class="item item-input item-floating-label">
+		    <span class="input-label">Category&nbsp;<small>(Max 10 characters)</small></span>
+		    <input type="text" class="" ng-model="card.category" maxlength="10" placeholder="Category - eg: Vocabulary, Math..">
+		  </label>
+		  
+		            
+			  	<label class="item item-input item-floating-label">
+			    <span class="input-label">Front&nbsp;<small>(Max 20 characters)</small></span>
+			    <input type="text" class="" ng-model="card.front" maxlength="20" placeholder="Front - eg: What is the capital of Japan?">
+		  		</label>
+			  	<label class="item item-input item-floating-label">
+			    <span class="input-label">Back&nbsp;<small>(Max 20 characters)</small></span>
+			    <input type="text" class="" ng-model="card.back"  maxlength="20" placeholder="Back - eg: Tokyo">
+			  </label>
+		  <p></p>
+		  <button class="button button-balanced" type="submit" ng-click="submit(card)">Add New Flashcard</button>
+		</div>
+  
+</div>
+  </ion-content>
+</ion-modal-view>

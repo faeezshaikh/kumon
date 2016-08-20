@@ -21,12 +21,12 @@
     color: #FAFAFA;
 }
 
-.nav-bar-block, .bar {
+/* .nav-bar-block, .bar {
   background-color:  #4257b2  !important;
-}
+} */
 .item-divider {
-	background-color:  #4257b2  !important;
-	color: #FAFAFA;
+	background-color:  #33cd5f  !important;
+	color: #fff;
 }
 
 .gallery {

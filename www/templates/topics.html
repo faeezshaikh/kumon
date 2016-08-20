@@ -1,4 +1,7 @@
 <ion-view view-title="Topics" class="background-color-grey">
+<ion-nav-bar class="bar-balanced">
+    <ion-nav-back-button></ion-nav-back-button>
+  </ion-nav-bar>
   <ion-content delegate-handle="show-page" >
  
   <p></p>
@@ -9,7 +12,7 @@
 			
 			<a href="#/tab/topics/{{topic.id}}">
 			 <div class="card" >
-			  <div class="item item-divider">
+			  <div class="item item-divider bar-balanced">
 			   {{topic.title}} ({{topic.length || 0}})
 			  </div>
 			  <div class="item item-text-wrap">

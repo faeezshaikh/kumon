@@ -1,5 +1,8 @@
 
 <ion-view view-title="Manage">
+<ion-nav-bar class="bar-balanced">
+    <ion-nav-back-button></ion-nav-back-button>
+  </ion-nav-bar>
 <ion-pane class="background-color-grey">
   <ion-content>
   <div class="card" ng-repeat="c in cards">
@@ -18,7 +21,7 @@
   
   </ion-content>
     <button class="button button-float" ng-click="openComposer()">
-	        <i class="icon ion-compose"></i>
+	        <i class="icon ion-plus"></i>
 	      </button>
 	      </ion-pane>
 </ion-view>

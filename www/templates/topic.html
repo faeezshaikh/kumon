@@ -1,6 +1,8 @@
 <ion-view view-title="One Topics" class="background-color-grey">
 
-
+<ion-nav-bar class="bar-balanced">
+    <ion-nav-back-button></ion-nav-back-button>
+  </ion-nav-bar>
   <ion-content delegate-handle="show-page" >
   <div class="row">&nbsp;</div>
   <div class="row">&nbsp;</div>
@@ -8,29 +10,29 @@
   
   <div class="row">&nbsp;</div>
   <div class="row">&nbsp;</div>
-  <button class="button kumon" ng-click="manage()"><i class="icon ion-arrow-right-a" ></i>Manage</button>
+  <button class="button button-balanced" ng-click="manage()"><i class="icon ion-edit" ></i>&nbsp;Manage</button>
     <h1 ng-class={{titleColor}}>{{title}} ({{cards.length}})</h1> 
 			    <div id="deck" class="" >
-			    <div class="cardx" ng-repeat="card in cards" class="">
-			      <div class="side_one">
-			        <p>{{card.front}}</p>
-			      </div>
-			      <div  class="side_two">
-			        <p>{{card.back}}</p>
-			      </div>
-			    </div>
+				    <div class="cardx" ng-repeat="card in cards" class="">
+				      <div class="side_one">
+				        <p>{{card.front}}</p>
+				      </div>
+				      <div  class="side_two">
+				        <p>{{card.back}}</p>
+				      </div>
+				    </div>
 			
 			</div>
 			
 			   <div id="nav_deck">
 			    
-			    <button class="button kumon" id="prev"><i class="icon ion-arrow-left-a" ></i>Previous</button>
+			    <button class="button button-balanced" id="prev"><i class="icon ion-arrow-left-a" ></i></button>
 			    
-			    <button class="button kumon" id="flipper" ng-click="spin()"><i class="icon ion-arrow-right-a" ></i>Flip</button>
+			    <button class="button button-balanced" id="flipper" ng-click="spin()"><i class="icon ion-arrow-up-a" ></i><i class="icon ion-arrow-down-a" ></i></button>
 			    
-			    <button class="button kumon" id="next"><i class="icon ion-arrow-right-a" ></i>Next</button>
+			    <button class="button button-balanced" id="next"><i class="icon ion-arrow-right-a" ></i></button>
 			    
-			    <button class="button kumon" id="" ng-controller="LoginCtrl" ng-click="logout()"><i class="icon ion-arrow-right-a" ></i>Logout</button>
+			    <!-- <button class="button button-balanced" id="" ng-controller="LoginCtrl" ng-click="logout()"><i class="icon ion-arrow-right-a" ></i>Logout</button> -->
 			  </div>
   	
   </ion-content>
