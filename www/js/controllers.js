@@ -177,7 +177,7 @@ angular.module('starter.controllers', [])
 })
 
 
-.controller('ChatsCtrl', function($scope, Chats,FIREBASE_URL,$firebaseArray,$ionicScrollDelegate,PersonService) {
+.controller('ChatsCtrl', function($scope,FIREBASE_URL,$firebaseArray,$ionicScrollDelegate,PersonService) {
 	$scope.data = {
 			messages: [],
 			message: '',
@@ -239,60 +239,15 @@ angular.module('starter.controllers', [])
 
 })
 
-.controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
-  $scope.chat = Chats.get($stateParams.chatId);
-})
-
 .controller('AccountCtrl', function($scope) {
   var card = {
     "category":"",
     "front": "",
     "back":""
   };
-  
-  $scope.cards = [];
-  $scope.submit = function(c) {
-	  $scope.cards.push(c);
-	  console.log('Added',$scope.cards);
-//	  card.front = '';
-//	  card.back = '';
-  }
-  
-  
 })
 
 
-
-.factory('PersonService', function($http) {
-	  var avatar,loginState;
-	  var loggedinUser = {};
-
-
-	  return {
-		
-		  SetLoginState: function(val) {
-			  loginState = val;
-		  },
-		  GetLoginState: function() {
-			  return loginState;
-		  },
-		  SetUserDetails: function(name,img,email,displayName) {
-			  loggedinUser.name = name;
-			  loggedinUser.img = img;
-			  loggedinUser.email = email;
-			  loggedinUser.displayName = displayName;
-		  },
-		  GetUserDetails: function() {
-			  return loggedinUser;
-		  },
-		  GetAvatar : function() {
-			  return avatar;
-		  },
-		  SetAvatar: function(url) {
-			  avatar = url;
-		  }
-	  }
-	})
 
 
 ;
