@@ -5,21 +5,21 @@ angular.module('starter.controllers')
 	
 	console.log('Id = ',$stateParams.topicId);
 	
-	$scope.cards = CardService.getCardsForTopic($stateParams.topicId);
+	$scope.cards = CardService.getDeckForTopic($stateParams.topicId);
 	$scope.title = CardService.getTitleForTopic($stateParams.topicId);
 	$scope.card = {'category':'','front':'','back':''};
 	
+	
+	///////// Open the Manage page button //////////
 	$scope.manage = function() {
 		console.log('managing..',$stateParams.topicId);
 		$location.path ("tab/topics/" + $stateParams.topicId + "/manage");
 		console.log(' State name = ',$window.location.href);
 	}
-	
-	$scope.remove = function(card) {
-		$scope.cards.splice($scope.cards.indexOf(card), 1);
-	}
+	///////// Open the Manage page button //////////	
 	
 	
+	//////// Add new Flashcard //////
 	 $ionicModal.fromTemplateUrl('templates/composeFlashcard.html', {
 		    scope: $scope,
 		    animation: 'slide-in-up'
@@ -38,15 +38,26 @@ angular.module('starter.controllers')
 		$scope.cards.push(card);
 		$scope.card = {};
 	}
+	//////// Add new Flashcard //////
 	
+	
+	//////// Delete Flashcard ////////
+	$scope.remove = function(card) {
+		$scope.cards.splice($scope.cards.indexOf(card), 1);
+	}
+	////////Delete Flashcard ////////
+	
+	
+	/////// Flashcard code /////////
+	function init(){
+		  $timeout(myCycle,10);
+	  }
+	  init();
 	$scope.spin = function() {
 		  console.log('spin');
 		  $('.cardx.current').toggleClass('flip');
 	  }
-	  function init(){
-		  $timeout(myCycle,10);
-	  }
-	  init();
+	
 	  function myCycle() {
 		  console.log('my cycle');
 	  
@@ -75,27 +86,7 @@ angular.module('starter.controllers')
 	    $(this).addClass('current');
 	  }
 	  
-	  $scope.vocabClicked = function() {
-			$scope.cards = [{"front":"isolated","back":"alone"},{"front":"facetious","back":"wth!"}];
-			$scope.title = "Vocabulary Flashcards";
-			init();
-			
-	  }
-	  
-	  $scope.topicSelected = function(topic){
-			$scope.title = topic.title + ' Flashcards';
-			init();
-			$ionicScrollDelegate.$getByHandle('show-page').scrollTop(true);
-	  }
-
-	  
-	  $scope.mathClicked = function() {
-			$scope.cards = [{"front":"2 + 5","back":"7"},{"front":"8 ÷ 2","back":"4"},{"front":"6 X 3","back":"18"}];
-			$scope.title = "Math Flashcards";
-			init();
-			
-	  }
-
+	/////// Flashcard code /////////
 
 })
 ;
