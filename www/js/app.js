@@ -5,9 +5,11 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','timer'])
+angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','auth0','timer','firebase'])
 
-.run(function($ionicPlatform) {
+
+.constant('FIREBASE_URL','https://kumon.firebaseio.com/')
+.run(function($ionicPlatform,$rootScope,$ionicModal,auth) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -21,6 +23,25 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','t
       StatusBar.styleDefault();
     }
   });
+  
+  /// Login  /////
+  
+  $rootScope.$on('$stateChangeStart', function (event, toState, toParams,$location) {
+	    var requireLogin = toState.data.requireLogin;
+
+	    if (requireLogin && typeof $rootScope.currentUser === 'undefined') {
+	      event.preventDefault();
+	      // get me a login modal!
+	      $ionicModal.fromTemplateUrl('templates/login.html', {
+				scope : $rootScope
+			}).then(function(modal) {
+				$rootScope.explModal = modal;
+				$rootScope.explModal.show();
+			});
+	    }
+	  });
+  
+  //// Login /////
 })
 
 .config(function($stateProvider, $urlRouterProvider) {
@@ -35,10 +56,23 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','t
     .state('tab', {
     url: '/tab',
     abstract: true,
-    templateUrl: 'templates/tabs.html'
+    templateUrl: 'templates/tabs.html',
+    	controller: 'DashCtrl',
+        data: {
+          requireLogin: true
+        }
   })
 
   // Each tab has its own nav history stack:
+    .state('tab.login', {
+        url: '/login',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/login.html',
+            controller: ''
+          }
+        }
+      })
 
   .state('tab.dash', {
     url: '/dash',

@@ -1,0 +1,43 @@
+<ion-modal-view>
+
+  <ion-content ng-controller="LoginCtrl" class="background-color-grey">
+    <div id="loginPage">
+
+
+      <div class="row text-center">
+        <div class="col col-100"><img style="width:60%;height:60%;padding-top:10%;" src="http://perfectscoreproject.com/wp-content/uploads/2011/06/Screen-shot-2011-06-27-at-9.41.42-PM.png"></div>
+      </div>
+      
+      
+      <div   class="list list-inset">
+        <label class="item item-input ">
+          <input type="text" placeholder="Kumon Id" ng-model="ameren.username" required>
+        </label>
+        <label class="item item-input ">
+          <input type="password" placeholder="Password"  ng-model="ameren.password" required>
+        </label>
+     		
+      </div>
+  			
+ 			<button type="submit" ng-disabled="!isFormValid()" class="button button-block button-positive" style="width:80%;margin-left:auto;margin-right:auto;" ng-click="submitForm()">
+         	 Sign in with Kumon
+        	</button>
+        	
+        	
+      <a class="btn btn-block btn-social btn-facebook" style="width:80%;margin-left:auto;margin-right:auto;" ng-click='login("facebook");'> <span class="fa fa-facebook"></span> Sign in with Facebook
+      </a>
+      <a class="btn btn-block btn-social btn-google" style="width:80%;margin-left:auto;margin-right:auto;" ng-click='login("google");'> <span class="fa fa-google"></span> Sign in with Google
+      </a>
+      <a class="btn btn-block btn-social btn-twitter" style="width:80%;margin-left:auto;margin-right:auto;" ng-click='login("twitter");'> <span class="fa fa-twitter"></span> Sign in with Twitter
+      </a>
+        <a class="btn btn-block btn-social btn-github" style="width:80%;margin-left:auto;margin-right:auto;" ng-click='login("github");'> <span class="fa fa-github"></span> Sign in with Github
+      </a>
+      <p>&nbsp;</p>
+      <div style="color:gray" class="text-center">© Copyright 2016</div>
+      <div style="color:gray" class="text-center">Kumon</div>
+       
+
+    </div>
+
+  </ion-content>
+</ion-modal-view>

@@ -1,16 +1,62 @@
-<ion-view view-title="Chats">
-  <ion-content>
-    <ion-list>
-      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="chat in chats" type="item-text-wrap" href="#/tab/chats/{{chat.id}}">
-        <img ng-src="{{chat.face}}">
-        <h2>{{chat.name}}</h2>
-        <p>{{chat.lastText}}</p>
-        <i class="icon ion-chevron-right icon-accessory"></i>
+<ion-view title="Chat"  class="show" >
+<ion-pane class="background-color-grey">
+	<!-- <ion-nav-buttons side="secondary" >
+		<button class="button button-clear" ng-click="user.toggleFavorite(show)" >
+		</button >
+	</ion-nav-buttons > -->
 
-        <ion-option-button class="button-assertive" ng-click="remove(chat)">
-          Delete
-        </ion-option-button>
-      </ion-item>
-    </ion-list>
-  </ion-content>
-</ion-view>
+	<ion-content delegate-handle="show-page" >
+
+		<!-- Loading Indicator -->
+		
+		<div class="row" ng-if="data.loading" >
+		    <div class="col">
+		        <div class="text-center">
+		           <ion-spinner icon="ripple" ></ion-spinner >
+					<p style="color:gray">Loading messages...</p >
+		        </div>
+		    </div>
+		</div>
+
+		<!-- Empty room message -->
+		<div class="row" ng-show="!data.loading && data.messages.length == 0">
+		    <div class="col">
+		        <div class="text-center">
+		            <!-- <p style="text-align: center; color:gray">No comments yet. Be the first!</p> -->
+		            <p style="color:gray">No comments yet. Be the first!</p>
+		        </div>
+		    </div>
+		</div>
+	
+		
+		<ul class="ChatLog">
+		  <li ng-class="!isThisMe(message.username,message.profilePic) ? 'ChatLog__entry' : 'ChatLog__entry ChatLog__entry_mine'" ng-repeat="message in data.messages">
+		    <img class="ChatLog__avatar" ng-src={{message.profilePic}} />
+		    <p class="ChatLog__message">
+		       {{message.text}}
+		       <br>
+		     <span style="font-size:11px; color:white; ">{{message.username}}</span>  <span style="font-size:10px; color:white; " am-time-ago="message.timestamp" ></span > 
+		    </p>
+		  </li>
+		</ul>
+		
+		
+
+	</ion-content >
+
+	<!-- Send Message Footer Area -->
+	<ion-footer-bar keyboard-attach
+	                class="bar-positive item-input-inset" >
+		<label class="item-input-wrapper" >
+			<input type="text"
+			       placeholder="Type your message"
+			       ng-enter="sendMessage()"
+			       ng-model="data.message" />
+		</label >
+		<button class="button button-clear"
+		        ng-click="sendMessage()" >
+			Send
+		</button >
+	</ion-footer-bar >
+</ion-pane>
+</ion-view >
