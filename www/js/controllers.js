@@ -12,12 +12,8 @@ angular.module('starter.controllers', [])
 	                 {"title":"Geometry","url":"http://www.freeiconspng.com/uploads/geometry-icon-30.jpg"}];
 	
 	$scope.cards = [{"front":"2+3","back":"5"},{"front":"whats your name?","back":"Maryam.sdfsdfdsfhsdifhos;idhfois"}];
-	  // FLIP
-	//	  $('#flipper').bind('click', function(){
-	//	    $('.cardx.current').toggleClass('flip');
-	//	  });
-	  
-	  $scope.spin = function() {
+
+	$scope.spin = function() {
 		  console.log('spin');
 		  $('.cardx.current').toggleClass('flip');
 	  }
@@ -26,7 +22,10 @@ angular.module('starter.controllers', [])
 		  console.log('next called');
 		  myCycle();
 	  }
-	  
+	  function init(){
+		  $timeout(myCycle,10);
+	  }
+	  init();
 	  function myCycle() {
 		  console.log('my cycle');
 	  
@@ -47,19 +46,12 @@ angular.module('starter.controllers', [])
 		  
 	  }
 	  
-		  function init(){
-			  
-			  $timeout(myCycle,10);
-//			  myCycle;
-			  
-		  }
-		  init();
+		
 		  
 	  function onBefore(){
 	    $(this).parent().find('.current').removeClass('current');
 	  }
 	  function onAfter(){
-//		  console.log('On after');
 	    $(this).addClass('current');
 	  }
 	  
