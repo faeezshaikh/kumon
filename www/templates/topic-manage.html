@@ -1,0 +1,16 @@
+
+<ion-view view-title="Manage">
+  <ion-content>
+  <div class="card" ng-repeat="c in cards">
+		  <div class="item item-divider" >
+		  	<i class="ion ion-trash-a pull-right"></i>
+		    {{title}}
+		  </div>
+		  <div class="item item-text-wrap">
+		    {{c.front}}
+		    <p>
+		    {{c.back}}
+		  </div>
+</div>
+  </ion-content>
+</ion-view>

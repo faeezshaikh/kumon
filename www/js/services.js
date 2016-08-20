@@ -1,5 +1,22 @@
 angular.module('starter.services', [])
 
+
+.factory('CardService',function(){
+
+	var map ={1:{"topic" : "Vocabulary", "cards" : [{"front":"2+3","back":"5"},{"front":"whats your name?","back":"Maryam Shaikh"}]},
+				2 : {"topic" : "Math", "cards" :  [{"front":"Whats your name?","back":"Maryam"},{"front":"How old are you?","back":"5"}]}};
+	 
+
+	  return {
+	    getCardsForTopic: function(topicId) {
+	      return map[topicId].cards;
+	    },
+	    getTitleForTopic: function(topicId) {
+		      return map[topicId].topic;
+		    }
+	  };
+
+})
 .factory('Chats', function() {
   // Might use a resource here that returns a JSON array
 
