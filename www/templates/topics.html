@@ -5,7 +5,7 @@
     
    <div class="list row gallery" >
     <!-- For wrapping cards used the gallery class https://forum.ionicframework.com/t/grid-list-that-wraps-items/7658/3 -->
-  		<div class="col col-50" ng-repeat="topic in topics" >
+  		<div class="col col-50" ng-repeat="topic in getTopics()" >
 			
 			<a href="#/tab/topics/{{topic.id}}">
 			 <div class="card" >

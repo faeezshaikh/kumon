@@ -11,12 +11,12 @@ angular.module('starter.controllers')
 	
 	$scope.manage = function() {
 		console.log('managing..',$stateParams.topicId);
-//		$state.go('tab.topic-manage');
-//		$window.location.href = "#/tab/topics/" + $stateParams.topicId + "/manage";
 		$location.path ("tab/topics/" + $stateParams.topicId + "/manage");
-//		$state.go('tab.topic-manage');
 		console.log(' State name = ',$window.location.href);
-//		 console.log(' State name = ',$state.current.name);
+	}
+	
+	$scope.remove = function(card) {
+		$scope.cards.splice($scope.cards.indexOf(card), 1);
 	}
 	$scope.spin = function() {
 		  console.log('spin');

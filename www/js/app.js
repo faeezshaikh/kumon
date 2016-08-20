@@ -24,6 +24,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','a
     }
   });
   
+//  $rootScope.digestTtl(20);
   /// Login  /////
   
   $rootScope.$on('$stateChangeStart', function (event, toState, toParams,$location) {
