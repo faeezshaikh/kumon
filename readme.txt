@@ -11,3 +11,12 @@ Changed the name .card to .cardx to prevent conflict with ionic card class.
 http://ghost-beakstar.rhcloud.com/ionic-a-few-of-my-favorite-things/
 https://docs.angularjs.org/error/$rootScope/infdig
 https://docs.angularjs.org/api/ng/provider/$rootScopeProvider
+
+
+//////
+
+jQuery Cycle Plugin [cycle] terminating; too few slides: 1
+
+If slides are 1, it stops flipping.. Modify the library to get around this.
+
+http://stackoverflow.com/questions/7988220/jquery-cycle-plugin-cycle-terminating-too-few-slides-1
