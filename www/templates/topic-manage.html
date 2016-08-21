@@ -4,18 +4,38 @@
     <ion-nav-back-button></ion-nav-back-button>
   </ion-nav-bar>
 <ion-pane class="background-color-grey">
+
   <ion-content>
-  <div class="card" ng-repeat="c in cards track by $index">
-		  <div class="item item-divider" >
-		  	<i class="ion ion-trash-a pull-right" ng-click="remove(c)"></i>
-		    {{title}}
-		  </div>
-		  <div class="item item-text-wrap">
-		    {{c.front}}
-		    <p>
-		    {{c.back}}
-		  </div>
-</div>
+  
+  <!-- Search Bar -->
+    <div class="bar bar-header item-input-inset bar-balanced">
+		      <label class="item-input-wrapper">
+		        <i class="icon ion-ios-search placeholder-icon"></i>
+		        <input  type="search" placeholder="Search" ng-model="searchText">
+		      </label>
+		      <button  class="button button-icon ion-android-cancel" ng-click="searchText=''; cancelFilter();">
+		      </button>
+		      	({{ filtered.length}})
+		    </div>
+  
+  <!-- End -->
+  
+  
+  <div class="list row gallery" >
+  	<div class="col col-25" ng-repeat="c in filtered = (cards | filter:searchText) track by $index" >
+	 	 <div class="card">
+			  <div class="item item-divider" >
+			  	<i class="ion ion-trash-a pull-right" ng-click="remove(c)"></i>
+			    {{title}}
+			  </div>
+			  <div class="item item-text-wrap">
+			    {{c.front}}
+			    <p>
+			    {{c.back}}
+			  </div>
+		</div>
+	</div>
+  </div>
 <!-- 	<div class="row">&nbsp;</div>
 	<div class="row">&nbsp;</div> -->
   
