@@ -62,7 +62,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','a
     templateUrl: 'templates/tabs.html',
     	controller: 'LoginCtrl',
         data: {
-          requireLogin: true
+          requireLogin: false
         }
   })
 

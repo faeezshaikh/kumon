@@ -141,32 +141,25 @@ angular.module('starter.controllers', [])
 	};
 	
 	function getName() {
-		return PersonService.GetUserDetails().name;
+		return PersonService.GetUserDetails().name || 'Dr. Kimura';
 	};
 	
 	function getImg() {
 		console.log(PersonService.GetAvatar());
-		return PersonService.GetAvatar();
+		return PersonService.GetAvatar() || "https://s3-us-west-2.amazonaws.com/kumonfs/Screen+Shot+2016-08-21+at+10.55.44+AM.png";
 	};
 	
 	$scope.isThisMe = function(name,profilePic) {
 		if(PersonService.GetUserDetails().name == name && PersonService.GetUserDetails().img == profilePic) {
 			return true;
 		}
+		if(name == 'Dr. Kimura') return true;
 		return false;
 	}
 	
 	
 	
 
-})
-
-.controller('AccountCtrl', function($scope) {
-  var card = {
-    "category":"",
-    "front": "",
-    "back":""
-  };
 })
 
 

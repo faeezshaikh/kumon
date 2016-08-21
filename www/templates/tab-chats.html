@@ -32,17 +32,51 @@
 		</div>
 	
 		
+		  <!-- The chat page doesnt show on Ipad. The following hack is only to work on iPad..otherwise on phones the original code in Teamster should work -->
+		
 		<ul class="ChatLog">
 		  <li ng-class="!isThisMe(message.username,message.profilePic) ? 'ChatLog__entry' : 'ChatLog__entry ChatLog__entry_mine'" ng-repeat="message in data.messages">
-		    <img class="ChatLog__avatar" ng-src={{message.profilePic}} />
-		    <p class="ChatLog__message">
-		       {{message.text}}
-		       <br>
-		     <span style="font-size:11px; color:white; ">{{message.username}}</span>  <span style="font-size:10px; color:white; " am-time-ago="message.timestamp" ></span > 
-		    </p>
+		  
+		  <div class="row" ng-show="!isThisMe(message.username,message.profilePic)">
+			  	<div class="col col-10">
+				  	 <img 
+				  	 class="ChatLog__avatar pull-left"
+				  	  ng-src={{message.profilePic}} />
+				   	
+				  	
+			  	</div>
+			  	<div class="col col-90">
+			  	
+			  	 <p class="ChatLog__message">
+				       {{message.text}} ////??
+				       <br>
+					     <span style="font-size:11px; color:white; ">{{message.username}}</span>  <span style="font-size:10px; color:white; " am-time-ago="message.timestamp" ></span > 
+				   	 </p>
+			  	</div>
+		  </div>
+		  
+		  
+		  <div class="row" ng-show="isThisMe(message.username,message.profilePic)">
+			  	<div class="col col-90">
+			  	
+			  	 <p class="ChatLog__message" style="position:absolute;width:100%">
+				       {{message.text}} ////??
+				       <br>
+					     <span style="font-size:11px; color:white; ">{{message.username}}</span>  <span style="font-size:10px; color:white; " am-time-ago="message.timestamp" ></span > 
+				   	 </p>
+			  	</div>
+			  	<div class="col col-10">
+				  	 <img 
+				  	 class="ChatLog__avatar pull-left"
+				  	  ng-src={{message.profilePic}} />
+				   	
+				  	
+			  	</div>
+			  	
+		  </div>
 		  </li>
 		</ul>
-		
+		 <!-- Ipad code till here -->
 		
 
 	</ion-content >
