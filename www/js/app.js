@@ -131,7 +131,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','a
     views: {
       'tab-settings': {
         templateUrl: 'templates/settings.html',
-        controller: 'AccountCtrl'
+        controller: ''
       }
     }
   })
