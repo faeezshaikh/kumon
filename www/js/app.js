@@ -5,7 +5,9 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','auth0','timer','firebase','ngCordova'])
+angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','auth0','timer','firebase','ngCordova'],function($rootScopeProvider) { 
+  $rootScopeProvider.digestTtl(15); 
+})
 
 
 .constant('FIREBASE_URL','https://kumon.firebaseio.com/')
@@ -58,7 +60,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','a
     url: '/tab',
     abstract: true,
     templateUrl: 'templates/tabs.html',
-    	controller: 'DashCtrl',
+    	controller: 'LoginCtrl',
         data: {
           requireLogin: true
         }
@@ -70,7 +72,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','a
         views: {
           'menuContent': {
             templateUrl: 'templates/login.html',
-            controller: ''
+            controller: 'LoginCtrl'
           }
         }
       })
