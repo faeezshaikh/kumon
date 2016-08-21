@@ -134,15 +134,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','a
     }
   })
   
-    .state('tab.share', {
-    url: '/share',
-    views: {
-      'tab-share': {
-        templateUrl: 'templates/share.html',
-        controller: 'SocialShareCtrl'
-      }
-    }
-  })
   
   ;
 
