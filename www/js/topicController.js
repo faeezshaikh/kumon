@@ -121,5 +121,15 @@ angular.module('starter.controllers')
 	  
 	/////// Flashcard code /////////
 
+	  
+	  $scope.changeColor = function(color) {
+		  if(color=='white') {
+			  $('.cardx p').css('background-color','');
+			  $('.cardx ').css('color','');
+		  } else {
+			  $('.cardx p').css('background-color',color);
+			  $('.cardx ').css('color','black');
+		  }
+	  }
 })
 ;

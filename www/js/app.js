@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','auth0','timer','firebase'])
+angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','auth0','timer','firebase','ngCordova'])
 
 
 .constant('FIREBASE_URL','https://kumon.firebaseio.com/')
@@ -139,7 +139,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','a
     views: {
       'tab-share': {
         templateUrl: 'templates/share.html',
-        controller: ''
+        controller: 'SocialShareCtrl'
       }
     }
   })

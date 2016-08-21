@@ -5,6 +5,12 @@
   </ion-nav-bar>
   <ion-content delegate-handle="show-page" >
   <div class="row">&nbsp;</div>
+    <button class="button ion-android-checkbox-blank"  ng-click="changeColor('white')" style="font-size:50px;color:white;"></button>
+			  <button class="button ion-android-checkbox-blank"  ng-click="changeColor('red')" style="font-size:50px;color:red;"></button>
+			  <button class="button ion-android-checkbox-blank"  ng-click="changeColor('pink')" style="font-size:50px;color:pink;"></button>
+			  <button class="button ion-android-checkbox-blank"  ng-click="changeColor('teal')" style="font-size:50px;color:teal;"></button>
+			  <button class="button ion-android-checkbox-blank"  ng-click="changeColor('cyan')" style="font-size:50px;color:cyan;"></button>
+			  
   <div class="row">&nbsp;</div>
   <div class="row">&nbsp;</div>
   
@@ -34,6 +40,35 @@
 			    
 			    <!-- <button class="button button-positive" id="" ng-controller="LoginCtrl" ng-click="logout()"><i class="icon ion-arrow-right-a" ></i>Logout</button> -->
 			  </div>
+			  
+			  <div class="row">&nbsp;</div>
+			  <div class="row">&nbsp;</div>
+			  <div class="row">&nbsp;</div>
+			  <div class="row">&nbsp;</div>
+			  <div class="row">&nbsp;</div>
+			  <div class="row">&nbsp;</div>
+			  <div class="row">&nbsp;</div>
+			  <div class="row">&nbsp;</div>  
+			  <div class="row">
+			  
+			  	<div class="col col-20">
+			  		<button class="button  ion-social-facebook" ng-controller="SocialShareCtrl" ng-click="shareFb()" style="font-size:50px;color:#387ef5;"></button>
+			  	</div>
+			  	<div class="col col-20">
+			  		<button class="button ion-social-twitter" ng-controller="SocialShareCtrl" ng-click="shareTwitter()" style="font-size:50px;color:#387ef5;"></button>
+			  	</div>
+			  	<div class="col col-20">
+			  		<button class="button  ion-social-whatsapp"   ng-controller="SocialShareCtrl" ng-click="shareWhatsapp()" style="font-size:50px;color:#387ef5;"></button>
+			  	</div>
+			  	<div class="col col-20">
+			  		<button class="button  ion-android-textsms" ng-controller="SocialShareCtrl"  ng-click="shareSms()" style="font-size:50px;color:#387ef5;"></button>
+			  	</div>
+			  	<div class="col col-20">
+			  		<button class="button  ion-email" ng-controller="SocialShareCtrl" ng-click="shareEmail()" style="font-size:50px;color:#387ef5;"></button>
+			  	</div>
+			  </div>
+			  
+			
   	
   </ion-content>
 </ion-view>
