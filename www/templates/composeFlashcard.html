@@ -8,17 +8,17 @@
 		  
 		  <label class="item item-input item-floating-label">
 		    <span class="input-label">Category&nbsp;<small>(Max 10 characters)</small></span>
-		    <input type="text" class="" ng-model="card.category" maxlength="10" placeholder="Category - eg: Vocabulary, Math..">
+		    <input type="text" class="" ng-model="card.category" maxlength="20" placeholder="Category - eg: Vocabulary, Math..">
 		  </label>
 		  
 		            
 			  	<label class="item item-input item-floating-label">
 			    <span class="input-label">Front&nbsp;<small>(Max 20 characters)</small></span>
-			    <input type="text" class="" ng-model="card.front" maxlength="20" placeholder="Front - eg: What is the capital of Japan?">
+			    <input type="text" class="" ng-model="card.front" maxlength="200" placeholder="Front - eg: What is the capital of Japan?">
 		  		</label>
 			  	<label class="item item-input item-floating-label">
 			    <span class="input-label">Back&nbsp;<small>(Max 20 characters)</small></span>
-			    <input type="text" class="" ng-model="card.back"  maxlength="20" placeholder="Back - eg: Tokyo">
+			    <input type="text" class="" ng-model="card.back"  maxlength="200" placeholder="Back - eg: Tokyo">
 			  </label>
 		  <p></p>
 		  <button class="button button-positive" type="submit" ng-click="submit(card)">Add New Flashcard</button>
