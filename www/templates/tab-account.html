@@ -1,45 +1,42 @@
-<ion-view view-title="Add New Flashcards">
-  <ion-content>
-  <div class="list padding">
-		  <form ng-submit="submit()">
-		  <label class="item item-input item-stacked-label">
-		    <span class="input-label">Category&nbsp;<small>(Max 10 characters)</small></span>
-		    <input type="text" class="text-center" ng-model="card.category" maxlength="10" placeholder="eg: Vocabulary, Math..">
-		  </label>
-		  
-		            
-		  <div class="row">
-		  	<div class="col col-50">
-			  	<label class="item item-input item-stacked-label">
-			    <span class="input-label">Front&nbsp;<small>(Max 20 characters)</small></span>
-			    <input type="text" class="text-center" ng-model="card.front" maxlength="20" placeholder="eg: What is the capital of Japan?">
-		  		</label>
-		  	</div>
-		  	<div class="col col-50">
-			  	<label class="item item-input item-stacked-label">
-			    <span class="input-label">Back&nbsp;<small>(Max 20 characters)</small></span>
-			    <input type="text" class="text-center" ng-model="card.back"  maxlength="20" placeholder="eg: Tokyo">
-			  </label>
-		  	</div>
-		  </div>
-		  <button class="button button-positive" type="submit" ng-click="submit(card)">Add New Flashcard</button>
-		  </form>
-		  <p></p>
-		</div>
-		
-			 <div class="card" ng-repeat="c in cards track by $index">
-			  <div class="item item-divider" >
-			  		<i class="ion ion-trash-a pull-right" ></i>
-			   {{c.category}}
-			  </div>
-			  <div class="item item-text-wrap">
-				   <div class="row">
-			    	<div class="col col-50">{{c.front}}</div>
-			    	<div class="col col-50">{{c.back}}</div>
-			   		 </div>
-			  </div>
-			</div>
-  
-</div>
-  </ion-content>
+<ion-view view-title="Settings">
+<ion-nav-bar class="bar-positive">
+    <ion-nav-back-button></ion-nav-back-button>
+  </ion-nav-bar>
+   <ion-pane class="background-color-grey">
+    <ion-nav-buttons side="secondary">
+      <button class="button button-clear" ng-click="user.toggleFavorite(show)">
+      </button>
+    </ion-nav-buttons>
+
+    <ion-content>
+      <div class="list">
+     <!--    <div class="item item-divider">
+          Notifications
+        </div> -->
+
+        <li class="item item-toggle">
+          Receive Push Notifications
+          <label class="toggle toggle-positive">
+            <input type="checkbox" checked>
+            <div class="track">
+              <div class="handle"></div>
+            </div>
+          </label>
+        </li>
+
+        <ion-list>
+
+          <ion-checkbox ng-repeat="item in checkboxes" ng-model="item.checked" ng-checked="item.checked">
+            {{ item.text }}
+          </ion-checkbox>
+
+        </ion-list>
+      </div>
+
+      <button style="width:80%;margin-left:auto;margin-right:auto;" ng-controller="LoginCtrl" ng-click="logout()" class="button button-block button-positive" ng-click="logout()">
+        Logout
+      </button>
+
+    </ion-content>
+  </ion-pane>
 </ion-view>

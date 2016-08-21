@@ -1,6 +1,6 @@
 <ion-view view-title="One Topics" class="background-color-grey">
 
-<ion-nav-bar class="bar-balanced">
+<ion-nav-bar class="bar-positive">
     <ion-nav-back-button></ion-nav-back-button>
   </ion-nav-bar>
   <ion-content delegate-handle="show-page" >
@@ -10,7 +10,7 @@
   
   <div class="row">&nbsp;</div>
   <div class="row">&nbsp;</div>
-  <button class="button button-balanced" ng-click="manage()"><i class="icon ion-edit" ></i>&nbsp;Manage</button>
+  <button class="button button-positive" ng-click="manage()"><i class="icon ion-edit" ></i>&nbsp;Manage</button>
     <h1 ng-class={{titleColor}}>{{title}} ({{cards.length}})</h1> 
 			    <div id="deck" class="" >
 				    <div class="cardx" ng-repeat="card in cards track by $index" class="">
@@ -26,13 +26,13 @@
 			
 			   <div id="nav_deck">
 			    
-			    <button class="button button-balanced" id="prev"><i class="icon ion-arrow-left-a" ></i></button>
+			    <button class="button button-positive" id="prev"><i class="icon ion-arrow-left-a" ></i></button>
 			    
-			    <button class="button button-balanced" id="flipper" ng-click="spin()"><i class="icon ion-arrow-up-a" ></i><i class="icon ion-arrow-down-a" ></i></button>
+			    <button class="button button-positive" id="flipper" ng-click="spin()"><i class="icon ion-arrow-up-a" ></i><i class="icon ion-arrow-down-a" ></i></button>
 			    
-			    <button class="button button-balanced" id="next"><i class="icon ion-arrow-right-a" ></i></button>
+			    <button class="button button-positive" id="next"><i class="icon ion-arrow-right-a" ></i></button>
 			    
-			    <!-- <button class="button button-balanced" id="" ng-controller="LoginCtrl" ng-click="logout()"><i class="icon ion-arrow-right-a" ></i>Logout</button> -->
+			    <!-- <button class="button button-positive" id="" ng-controller="LoginCtrl" ng-click="logout()"><i class="icon ion-arrow-right-a" ></i>Logout</button> -->
 			  </div>
   	
   </ion-content>
