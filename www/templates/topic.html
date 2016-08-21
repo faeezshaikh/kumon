@@ -13,7 +13,7 @@
   <button class="button button-balanced" ng-click="manage()"><i class="icon ion-edit" ></i>&nbsp;Manage</button>
     <h1 ng-class={{titleColor}}>{{title}} ({{cards.length}})</h1> 
 			    <div id="deck" class="" >
-				    <div class="cardx" ng-repeat="card in cards" class="">
+				    <div class="cardx" ng-repeat="card in cards track by $index" class="">
 				      <div class="side_one">
 				        <p>{{card.front}}</p>
 				      </div>

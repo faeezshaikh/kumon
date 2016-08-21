@@ -50,10 +50,22 @@ angular.module('starter.services', [])
 	    	return null;
 	    },
 	    updateDeckInDecks : function(deck) {  // Actually updating only the cards array.
+	    	var found = false;
 	    	for(i=0;i<decks.length;i++){
 	    		if(decks[i].id == deck.id) { //found, update the cards
-	    			decks[i].cards = deck.cards;
+	    			if(deck.cards && deck.cards.length>0) {
+	    				decks[i].cards = deck.cards;
+		    			
+	    			} else {
+	    				decks.splice(decks.indexOf(deck), 1); // If no cards in the deck, remove the deck
+	    			}
+	    			found = true;
+	    			break;
+	    		
 	    		}
+	    	}
+	    	if(!found) {
+	    		decks.push(deck);
 	    	}
 	    }
 		
