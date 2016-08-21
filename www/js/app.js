@@ -124,15 +124,27 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','a
       }
     })
 
-  .state('tab.account', {
-    url: '/account',
+  .state('tab.settings', {
+    url: '/settings',
     views: {
-      'tab-account': {
-        templateUrl: 'templates/tab-account.html',
+      'tab-settings': {
+        templateUrl: 'templates/settings.html',
         controller: 'AccountCtrl'
       }
     }
-  });
+  })
+  
+    .state('tab.share', {
+    url: '/share',
+    views: {
+      'tab-share': {
+        templateUrl: 'templates/share.html',
+        controller: ''
+      }
+    }
+  })
+  
+  ;
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/tab/topics');

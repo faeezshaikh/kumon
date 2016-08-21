@@ -2,9 +2,10 @@ angular.module('starter.services', [])
 
 
 .factory('CardService',function(){
-
+	
+//		http://a1.mzstatic.com/us/r30/Purple/v4/33/10/28/331028e2-eaae-d915-6828-866121dbca31/icon256.png
 	var decks =[
-			{"id":1,"topic" : "Vocabulary", "url":"http://a1.mzstatic.com/us/r30/Purple/v4/33/10/28/331028e2-eaae-d915-6828-866121dbca31/icon256.png","cards" : [{"category":"Vocabulary","front":"2+3","back":"5"},{"category":"Vocabulary","front":"whats your name?","back":"Maryam Shaikh"},{"category":"Vocabulary","front":"22+31","back":"33"}]},
+			{"id":1,"topic" : "Vocabulary", "url":"https://lh5.ggpht.com/aRugu6jU5f-PSNpB7E9Avvdct7wfqLKFXt5HaqZ31SGjQ6Cu-nrze9RKd3soPWR5NqlB=w300","cards" : [{"category":"Vocabulary","front":"2+3","back":"5"},{"category":"Vocabulary","front":"whats your name?","back":"Maryam Shaikh"},{"category":"Vocabulary","front":"22+31","back":"33"}]},
 			{"id":2, "topic" : "Science", "url":"http://www.iconarchive.com/download/i43037/oxygen-icons.org/oxygen/Categories-applications-science.ico","cards" :  [{"category":"Science","front":"Whats your name?","back":"Maryam"},{"category":"Science","front":"How old are you?","back":"5"}]},
 			{"id":3, "topic" : "Algebra", "url":"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Icon_Mathematical_Plot.svg/2000px-Icon_Mathematical_Plot.svg.png","cards" :  [{"category":"Algebra","front":"Whats your name?","back":"Maryam"},{"category":"Algebra","front":"How old are you?","back":"5"}]},
 			{"id":4, "topic" : "Geometry", "url":"http://www.freeiconspng.com/uploads/geometry-icon-30.jpg","cards" :  [{"category":"Geometry","front":"Whats your name?","back":"Maryam"},{"category":"Geometry","front":"How old are you?","back":"5"}]},

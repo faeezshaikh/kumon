@@ -70,7 +70,7 @@ ul.ChatLog {
   bottom: .6em;
   left: auto;
   border: 6px solid transparent;
-  border-left-color: rgb(0, 136, 98) !important;
+  border-left-color: #387ef5 !important;
 }
 
 .ChatLog__message {
@@ -82,9 +82,9 @@ ul.ChatLog {
 }
 
 .ChatLog__entry.ChatLog__entry_mine .ChatLog__message {
-  border-top: 1px solid rgb(0, 136, 98) !important;;
-  border-bottom: 1px solid rgb(0, 136, 98) !important;;
-  background-color: rgb(0, 136, 98) !important;;
+  border-top: 1px solid #387ef5 !important;;
+  border-bottom: 1px solid #387ef5 !important;;
+  background-color: #387ef5 !important;;
   color: #fff;
 }
 

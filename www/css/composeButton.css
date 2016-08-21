@@ -1,7 +1,7 @@
 .button-float{
   background: $assertive !important;
   color:white !important;
-  background-color: rgba(232, 27, 27, 0.82);
+  background-color: #387ef5;
   z-index: 12 !important;
   position: absolute !important; 
   bottom: 60px !important;

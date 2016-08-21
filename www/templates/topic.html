@@ -1,4 +1,4 @@
-<ion-view view-title="One Topics" class="background-color-grey">
+<ion-view view-title="{{title}} Practice ({{cards.length}})" class="background-color-grey">
 
 <ion-nav-bar class="bar-positive">
     <ion-nav-back-button></ion-nav-back-button>
@@ -11,7 +11,7 @@
   <div class="row">&nbsp;</div>
   <div class="row">&nbsp;</div>
   <button class="button button-positive" ng-click="manage()"><i class="icon ion-edit" ></i>&nbsp;Manage</button>
-    <h1 ng-class={{titleColor}}>{{title}} ({{cards.length}})</h1> 
+    <!-- <h1 ng-class={{titleColor}}>{{title}} ({{cards.length}})</h1>  -->
 			    <div id="deck" class="" >
 				    <div class="cardx" ng-repeat="card in cards track by $index" class="">
 				      <div class="side_one">
