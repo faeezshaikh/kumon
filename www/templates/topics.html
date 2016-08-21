@@ -8,16 +8,16 @@
     
    <div class="list row gallery" >
     <!-- For wrapping cards used the gallery class https://forum.ionicframework.com/t/grid-list-that-wraps-items/7658/3 -->
-  		<div class="col col-50" ng-repeat="topic in getTopics()" >
+  		<div class="col col-50" ng-repeat="deck in getTopics()" >
 			
-			<a href="#/tab/topics/{{topic.id}}">
+			<a href="#/tab/topics/{{deck.id}}">
 			 <div class="card" >
-			  <div class="item item-divider bar-balanced">
-			   {{topic.title}} ({{topic.length || 0}})
-			  </div>
-			  <div class="item item-text-wrap">
-			    <img style="width:50%;height:50%" ng-src={{topic.url}} />
-			  </div>
+				  <div class="item item-divider bar-balanced">
+				   {{deck.topic}} ({{deck.cards.length || 0}})
+				  </div>
+				  <div class="item item-text-wrap">
+				    <img style="width:50%;height:50%" ng-src={{deck.url}} />
+				  </div>
 			</div>
 			</a>
   		</div>
