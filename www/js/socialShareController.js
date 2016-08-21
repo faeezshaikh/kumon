@@ -2,10 +2,10 @@ angular.module('starter.controllers')
 
 .controller('SocialShareCtrl', function($scope,$cordovaSocialSharing) {
 	
- var message = "Check out the new Ameren Idea App in the app store.";
- var image = "https://s3-us-west-2.amazonaws.com/amerenppl/icon.png";
+ var message = "Check out the new Kumon app in the app store.";
+ var image = "https://s3-us-west-2.amazonaws.com/kumonfs/icon.png";
  var link = "https://play.google.com/store/apps/details?id=com.ionicframework.awsArch";
- var subject = "The Ameren Idea App";
+ var subject = "The new Kumon App";
  var smsMessage = message + ": " + link;
  
 	$scope.shareFb = function() {
