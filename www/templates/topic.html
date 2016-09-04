@@ -19,7 +19,7 @@
   <button class="button button-positive" ng-click="manage()"><i class="icon ion-edit" ></i>&nbsp;Manage</button>
     <!-- <h1 ng-class={{titleColor}}>{{title}} ({{cards.length}})</h1>  -->
 			    <div id="deck" class="" >
-				    <div class="cardx" ng-repeat="card in cards track by $index" class="">
+				    <div class="cardx" ng-repeat="card in cards track by $index" >
 				      <div class="side_one">
 				        <p>{{card.front}}</p>
 				      </div>
@@ -32,11 +32,13 @@
 			
 			   <div id="nav_deck">
 			    
-			    <button class="button button-positive" id="prev"><i class="icon ion-arrow-left-a" ></i></button>
+			    <!--<button class="button button-positive" id="prev"><i class="icon ion-arrow-left-a" ></i></button>-->
+					<button class="button button-float" id="prev" style="right:520px !important; bottom:0px !important" ><i class="icon ion-arrow-left-a" ></i></button>
 			    
 			    <button class="button button-positive" id="flipper" ng-click="spin()"><i class="icon ion-arrow-up-a" ></i><i class="icon ion-arrow-down-a" ></i></button>
 			    
-			    <button class="button button-positive" id="next"><i class="icon ion-arrow-right-a" ></i></button>
+			    <!--<button class="button button-positive" id="next"><i class="icon ion-arrow-right-a" ></i></button>-->
+					<button class="button button-float" id="next" style="right:180px !important; bottom:0px !important" ><i class="icon ion-arrow-right-a" ></i></button>
 			    
 			    <!-- <button class="button button-positive" id="" ng-controller="LoginCtrl" ng-click="logout()"><i class="icon ion-arrow-right-a" ></i>Logout</button> -->
 			  </div>
@@ -68,7 +70,7 @@
 			  	</div>
 			  </div>
 			  
-			
+		
   	
   </ion-content>
 </ion-view>

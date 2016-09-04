@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','auth0','timer','firebase','ngCordova'],function($rootScopeProvider) { 
+angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','auth0','timer','firebase','ngCordova','circle.countdown'],function($rootScopeProvider) { 
   $rootScopeProvider.digestTtl(15); 
 })
 
@@ -132,6 +132,17 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','a
       'tab-settings': {
         templateUrl: 'templates/settings.html',
         controller: ''
+      }
+    }
+  })
+
+
+  .state('tab.test', {
+    url: '/test',
+    views: {
+      'tab-test': {
+        templateUrl: 'templates/test.html',
+        controller: 'TopicCtrl'
       }
     }
   })

@@ -131,5 +131,12 @@ angular.module('starter.controllers')
 			  $('.cardx ').css('color','black');
 		  }
 	  }
+
+
+		 $scope.finished = function(){
+        // Finish callback
+				console.log('Finito!');
+				
+    };
 })
 ;

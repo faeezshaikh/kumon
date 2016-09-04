@@ -20,3 +20,13 @@ jQuery Cycle Plugin [cycle] terminating; too few slides: 1
 If slides are 1, it stops flipping.. Modify the library to get around this.
 
 http://stackoverflow.com/questions/7988220/jquery-cycle-plugin-cycle-terminating-too-few-slides-1
+
+
+//////
+
+Circular Timer Countdown (Angular)
+https://github.com/shakogegia/angular-circle-countdown
+
+Hacks (changes) in angular_circle_countdown.js
+1. Removed the template for days, hours, minutes
+2. Line 58    max: $scope.time, (so that circle's 100% is the time set)
