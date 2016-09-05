@@ -10,12 +10,12 @@
 
     <ion-content>
 
-      <div class="list card">
-
+      <div class="list card" ng-hide="resultMode">
+<uib-progressbar max="max" value="dynamic" class="progress-striped" type="success"><span style="color:black; white-space:nowrap;">{{dynamic}} / {{max}}</span></uib-progressbar>
         <div class="item item-avatar">
-             <uib-progressbar max="max" value="dynamic" class="progress-striped" type="success"><span style="color:black; white-space:nowrap;">{{dynamic}} / {{max}}</span></uib-progressbar>
+             <!--<uib-progressbar max="max" value="dynamic" class="progress-striped" type="success"><span style="color:black; white-space:nowrap;">{{dynamic}} / {{max}}</span></uib-progressbar>
           <h2>Arithmetic</h2>
-          <p>Level 1</p>
+          <p>Level 1</p>-->
            <countdown autostart="true" time="20" limit colors="flat-colors-very-wide" callback="finished()">
         </div>
 
@@ -36,12 +36,58 @@
         </div>
 
        <div class="item">
+         
             <span style="font-size:40px">{{result}}</span>
 
        </div>
 
       </div>
 
+
+         <div class="list card" ng-show="resultMode">
+
+                <div class="item item-avatar">
+
+                    <img height="150" width="150" ng-src="data/img/exam.jpg">
+                    <p>Score card</p>
+                    <h2>{{verdict}}</h2>
+
+                </div>
+
+                <div class="item item-body">
+
+                    <div class="row">
+                        <div class="col col-80">Total Questions</div>
+                        <div class="col col-20">{{totalQues}}</div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col col-80">Correct Answers</div>
+                        <div class="col col-20">{{totalQues - wrong}}</div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col col-80">Incorrect Answers</div>
+                        <div class="col col-20">{{wrong}}</div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col col-80">Total</div>
+                        <div class="col col-20"><strong>{{score}} %</strong></div>
+                    </div>
+                    <div class="row">
+                        <div class="col col-80"><strong>Result</strong></div>
+                        <div class="col col-20"><strong>{{verdict}}</strong></div>
+                    </div>
+                    <hr/>
+                    <!-- <img class="full-image" height="150" width="100" ng-src="data/img/table.jpg"> -->
+                    <p class="center">
+
+                        <button class="button button-balanced" ng-click="closeResults()">Close</button>
+                    </p>
+
+                </div>
+            </div>
     </ion-content>
   </ion-pane>
 </ion-view>

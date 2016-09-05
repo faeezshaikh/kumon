@@ -210,7 +210,12 @@ angular.module('starter.controllers')
 
 			// console.log('index',index);
 
-			if (begin == $scope.questions.length) $scope.showNext = false;
+			if (begin == $scope.questions.length) {
+						$timeout(function () {
+								$scope.resultMode = true;
+							}, 500);
+				
+			}
 			$scope.filteredQuestions = $scope.questions.slice(begin, begin + 1);
 			
 		}
@@ -225,6 +230,8 @@ angular.module('starter.controllers')
 		///// Progress bar code /////
 
 		$scope.max = $scope.questions.length;
+
+
 		function resetButtons() {
 			$scope.buttonType0 = 	$scope.buttonType1 = 	$scope.buttonType2 = 	$scope.buttonType3 =  "button button-stable";
 			$scope.result = "";
@@ -248,5 +255,6 @@ angular.module('starter.controllers')
 					$scope.result = "Wrong!";
 				}
 	}
+
 	})
 	;
