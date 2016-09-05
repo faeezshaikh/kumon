@@ -1,0 +1,27 @@
+<ion-view view-title="Test Menu" class="background-color-grey">
+	<ion-nav-bar class="bar-positive">
+		<ion-nav-back-button></ion-nav-back-button>
+	</ion-nav-bar>
+	<ion-content delegate-handle="show-page">
+
+		<p></p>
+
+		<div class="list row gallery">
+			<!-- For wrapping cards used the gallery class https://forum.ionicframework.com/t/grid-list-that-wraps-items/7658/3 -->
+			<div class="col col-50" ng-repeat="testTopic in testTopics">
+
+				<a href="#/tab/testTopics/{{testTopic.id}}">
+					<div class="card">
+						<div class="item item-divider bar-positive">
+							{{testTopic.topic}}
+						</div>
+						<div class="item item-text-wrap">
+							<img style="width:50%;height:50%" ng-src={{testTopic.url}} />
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>
+
+	</ion-content>
+</ion-view>
