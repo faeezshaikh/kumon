@@ -30,3 +30,7 @@ https://github.com/shakogegia/angular-circle-countdown
 Hacks (changes) in angular_circle_countdown.js
 1. Removed the template for days, hours, minutes
 2. Line 58    max: $scope.time, (so that circle's 100% is the time set)
+
+
+////// Playing audio files
+https://www.thepolyglotdeveloper.com/2014/11/playing-audio-android-ios-ionicframework-app/
