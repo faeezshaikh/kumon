@@ -95,6 +95,29 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','a
       }
     }
   })
+
+ .state('tab.testTopics', {
+    url: '/testTopics',
+    views: {
+      'tab-testTopics': {
+        templateUrl: 'templates/test-menu.html',
+        controller: 'TestCtrl'
+      }
+    }
+  })
+  
+   .state('tab.testTopic', {
+    url: '/testTopics/:testTopicId',
+    views: {
+      'tab-testTopics': {
+        templateUrl: 'templates/testLevels.html',
+        controller: 'TestLevelsCtrl'
+      }
+    }
+  })
+
+
+
    .state('tab.topic-manage', {
     url: '/topics/:topicId/manage',
     views: {
@@ -137,17 +160,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','a
   })
 
 
-  .state('tab.test', {
-    url: '/test',
-    views: {
-      'tab-test': {
-        templateUrl: 'templates/test.html',
-        controller: 'TopicCtrl'
-      }
-    }
-  })
-  
-  
+ 
   ;
 
   // if none of the above states are matched, use this as the fallback
