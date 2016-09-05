@@ -132,11 +132,37 @@ angular.module('starter.controllers')
 		  }
 	  }
 
+		////// Quiz Code ////////
+		var begin = 0;
+		$scope.showNext= true;
+		$scope.dynamic = 0;
+		$scope.questions = [{'id':0,'q':'first'},
+												{'id':1,'q':'second'},
+												{'id':2,'q':'third'},
+												{'id':3,'q':'fourth'},
+												{'id':4,'q':'fifith'},
+												{'id':5,'q':'sixth'}];
+		$scope.filteredQuestions = $scope.questions.slice(begin,begin+1);
+
+		$scope.goTo = function(){
+			begin= begin+1;
+			    $scope.dynamic = begin;
+			// console.log('index',index);
+			
+			if(begin == $scope.questions.length) $scope.showNext = false;
+			$scope.filteredQuestions = $scope.questions.slice(begin,begin+1);
+		}
+		//////// Quiz Code ends ///////	
 
 		 $scope.finished = function(){
         // Finish callback
 				console.log('Finito!');
 				
     };
+
+		///// Progress bar code /////
+
+		 $scope.max = 6;
+
 })
 ;

@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','auth0','timer','firebase','ngCordova','circle.countdown'],function($rootScopeProvider) { 
+angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','auth0','timer','firebase','ngCordova','circle.countdown','ngAnimate', 'ngSanitize', 'ui.bootstrap'],function($rootScopeProvider) { 
   $rootScopeProvider.digestTtl(15); 
 })
 
